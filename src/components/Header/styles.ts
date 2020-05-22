@@ -23,6 +23,19 @@ export const Container = styled.div<ContainerProps>`
         font-size: 16px;
         transition: opacity 0.2s;
 
+        position: relative;
+
+        &.active::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          left: 0;
+          bottom: -10px;
+          background: #ff872c;
+          transition: all 200ms ease;
+        }
+
         & + a {
           margin-left: 32px;
         }
